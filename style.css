@@ -21,7 +21,7 @@
 
 @font-face {
   font-family: "AdelleSansARA";
-  src: url("assets/font/AdelleSansARA-Semibold.otf"); /* Bold weight */
+  src: url("assets/font/AdelleSansARA-Semibold.otf"); /* Semibold weight */
   font-weight: 600;
 }
 
@@ -33,6 +33,7 @@
 
 body {
   font-family: "AdelleSansARA", sans-serif;
+  background: var(--bg-gradient-1);
 
   &:has(.nav-links.show) {
     height: 100dvh;
