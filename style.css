@@ -31,6 +31,12 @@
   font-weight: bold;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "AdelleSansARA", sans-serif;
   background: var(--bg-gradient-1);
@@ -198,6 +204,50 @@ main {
   }
 }
 
+.features {
+  position: relative;
+  padding: 1rem 0 1.5rem;
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: var(--bg-gradient-2);
+  }
+
+  .head {
+    color: var(--text-light-primary);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: calc(70px - 1rem) 0 50px;
+    text-align: center;
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      color: var(--text-light-secondary);
+    }
+  }
+
+  .features-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .feature {
+      background: var(--text-light-primary);
+      padding: 2.25rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+}
+
 /* In mid screen */
 @media only screen and (min-width: 850px) {
   main {
@@ -238,6 +288,16 @@ main {
       #menu-btn {
         display: none;
       }
+    }
+  }
+
+  .features {
+    &::after {
+      bottom: 7rem;
+    }
+
+    .features-container {
+      flex-direction: row;
     }
   }
 }
