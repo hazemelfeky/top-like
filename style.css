@@ -56,10 +56,14 @@ a {
 
 h2 {
   font-size: 40px;
+  line-height: 60px;
+  margin: 0;
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1280px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
 }
 
@@ -165,8 +169,49 @@ nav {
   }
 }
 
+main {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .details {
+    margin-bottom: 2rem;
+    text-align: center;
+    max-width: 29.5rem;
+
+    p {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .download-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      .download-now {
+        padding: 0.5rem 1.5rem;
+        text-align: start;
+      }
+    }
+  }
+}
+
+/* In mid screen */
+@media only screen and (min-width: 850px) {
+  main {
+    flex-direction: row;
+    .details {
+      text-align: start;
+      .download-links {
+        justify-content: start;
+      }
+    }
+  }
+}
+
 /* In large screen */
-@media only screen and (min-width: 970px) {
+@media only screen and (min-width: 1000px) {
   nav {
     .nav-links {
       position: relative;
