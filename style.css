@@ -91,6 +91,7 @@ nav {
   padding-bottom: 0.5rem !important;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   .nav-links {
     position: fixed;
@@ -124,9 +125,9 @@ nav {
 
   .btn {
     background: #000;
-    min-width: 8.75rem;
+    min-width: 7rem;
     height: fit-content;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
     align-self: center;
   }
 
@@ -438,8 +439,86 @@ main {
   }
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--text-dark-2);
+  gap: 3rem;
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  h5 {
+    color: var(--text-dark-primary);
+    margin-bottom: 2rem;
+    font-size: 18px;
+  }
+
+  .info {
+    p {
+      margin-top: 2rem;
+      max-width: 320px;
+    }
+  }
+
+  .pages div {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem 3rem;
+
+    a {
+      width: fit-content;
+    }
+  }
+
+  .contact-us {
+    max-width: 200px;
+    p {
+      margin-top: 1.5rem;
+      color: var(--text-dark-secondary);
+    }
+  }
+
+  .follow-us div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    a {
+      color: var(--text-dark-secondary);
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+  }
+}
+.credits {
+  border-top: 1px solid #ededed;
+  .container {
+    color: var(--text-dark-1);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.logo {
+  width: 120px;
+}
+
 /* In mid screen */
 @media only screen and (min-width: 850px) {
+  .logo {
+    width: auto;
+  }
+  .btn {
+    min-width: 8.75rem !important;
+    padding: 1rem 0 !important;
+  }
   main {
     flex-direction: row;
     .details {
@@ -527,5 +606,9 @@ main {
         text-align: justify;
       }
     }
+  }
+
+  footer {
+    flex-direction: row;
   }
 }
