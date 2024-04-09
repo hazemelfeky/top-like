@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Top Like</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <nav class="container">
@@ -155,19 +160,33 @@
       </div>
     </section>
     <section class="screens">
-      <div>
+      <div class="head">
         <h2>شاشات التطبيق</h2>
         <p>نعرض لكم بعض شاشات تطبيق توب لايك</p>
         <div class="screens-btns">
-          <a href="#">شاشات المستخدم</a>
-          <a href="#"> شاشات التجار</a>
+          <a href="#" class="btn active">شاشات المستخدم</a>
+          <a href="#" class="btn">شاشات التجار</a>
         </div>
       </div>
-      <div class="slider">
-        <img src="./assets/slider-1.png" alt="Screen 1" />
-        <img src="./assets/slider-2.png" alt="Screen 2" />
-        <img src="./assets/slider-3.png" alt="Screen 3" />
-        <img src="./assets/slider-4.png" alt="Screen 4" />
+      <div id="swiper">
+        <div class="swiper-wrapper">
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/slider-1.png')"
+          ></div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/slider-2.png')"
+          ></div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/slider-3.png')"
+          ></div>
+          <div
+            class="swiper-slide"
+            style="background-image: url('assets/slider-4.png')"
+          ></div>
+        </div>
       </div>
     </section>
     <section class="app">
@@ -243,6 +262,6 @@
         <p>صنع في <img src="./assets/ibtdi-logo.svg" alt="ibtdi" /></p>
       </div>
     </footer>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>
