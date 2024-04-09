@@ -383,6 +383,61 @@ main {
   }
 }
 
+.app {
+  color: var(--text-light-primary);
+  background: var(--bg-gradient-2);
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  width: 95%;
+  overflow: hidden;
+  position: relative;
+
+  h2 {
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--text-light-secondary);
+    margin-top: 1rem;
+  }
+
+  .screens-btns {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    z-index: 2;
+
+    .btn {
+      padding: 0.75rem 1.75rem;
+      background: linear-gradient(0deg, #181a1b, #181a1b),
+        linear-gradient(0deg, rgba(0, 0, 0), rgba(0, 0, 0));
+    }
+  }
+
+  .bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    img:nth-child(1) {
+      transform: translate(0, -15px);
+    }
+
+    img:nth-child(2) {
+      transform: translate(-25px, -100px);
+    }
+
+    img:nth-child(3) {
+      transform: translate(-75px, 35px);
+    }
+  }
+}
+
 /* In mid screen */
 @media only screen and (min-width: 850px) {
   main {
