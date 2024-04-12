@@ -370,15 +370,11 @@ main {
 
   #swiper {
     height: 556px;
+    width: 100%;
 
     .swiper-wrapper {
-      display: flex;
-      justify-content: center;
-
       .swiper-slide {
-        width: 290px;
-        background-repeat: no-repeat;
-        background-position: center;
+        width: fit-content;
       }
     }
   }

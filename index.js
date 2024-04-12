@@ -8,6 +8,7 @@ menuBtn.addEventListener("click", () => {
 });
 
 const swiper = new Swiper("#swiper", {
+  autoplay: true,
   slidesPerView: "auto",
   centeredSlides: true,
 });
